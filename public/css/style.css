@@ -1,0 +1,121 @@
+:root {
+  --primary: #1b76d2;
+  --secondary: #1e90ff;
+  --light: white;
+  --gray100: rgba(252, 252, 252, 0.867);
+  --gray200: rgba(246, 246, 246, 0.867);
+  --gray300: rgba(242, 242, 242, 0.867);
+  --gray400: rgba(236, 236, 236, 0.867);
+  --gray500: rgba(224, 224, 224, 0.867);
+  --gray600: rgba(207, 207, 207, 0.867);
+  --gray700: rgba(173, 173, 173, 0.867);
+  --gray800: rgba(163, 163, 163, 0.867);
+  --gray900: rgba(150, 150, 150, 0.867);
+  --dark: black;
+  --title-color-light: white;
+  --title-color-dark: black;
+  --success: rgb(25, 91, 57);
+  --light-success: rgb(40, 146, 91);
+  --alert: blue;
+  --warning: orange;
+  --danger: rgb(199, 83, 83);
+}
+
+.label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.btn {
+  padding: 1rem 0.7rem;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  transition: all ease-in-out 0.2s;
+}
+
+.btn:hover {
+  cursor: pointer;
+  filter: brightness(0.8);
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: var(--success);
+  color: var(--light);
+  border: none;
+}
+
+.text-upper {
+  text-transform: uppercase;
+}
+
+.input {
+  border: 1px solid var(--gray700);
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+  background-color: var(--gray100);
+  color: var(--gray900);
+}
+
+*:focus {
+  outline: solid 1px var(--primary);
+}
+
+.input:focus {
+  background-color: var(--light);
+}
+
+.fieldset {
+  display: flex;
+  min-width: 100%;
+  flex-direction: column;
+  border: 1px solid var(--gray300);
+  padding: 0.9rem;
+}
+
+.form {
+  display: flex;
+  padding: 1.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.message {
+  display: flex;
+  width: 90%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+  color: var(--light);
+  font-size: 1rem;
+  font-weight: 400;
+  border-radius: 0.5rem;
+  pointer-events: none;
+}
+
+.error {
+  background-color: var(--danger);
+}
+
+.message::after{
+  cursor: pointer;
+  content: '✘';
+  justify-self: flex-end;
+  pointer-events: all;
+}
+
+.message:hover::after{
+  font-weight: bold;
+}
+
+.success {
+  background-color: var(--light-success);
+}
+
+.hidden {
+  display: none;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+}

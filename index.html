@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="description" content="Um site para praticar o html, css e javascript">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./public/images/256x256bb.jpg">
+    <link rel="author" href="https://www.linkedin.com/in/alessandro-l-menezes-57906b71/">
+    <link rel="stylesheet" href="./public/css/nomalize.css">
+    <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="stylesheet" href="./public/css/index.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <main class="main">
+        <h1 hidden>Login</h1>
+        <section class="main__section">
+            <form action="#" method="post" class="form">
+                <h2 class="">Login</h2>
+                <div class="message error hidden"><p>Error: something went wrong!</p></div>
+                <div class="message success hidden"><p>Success: all done!</p></div>
+                <fieldset class="fieldset">
+                    <label for="user" class="label">Nick</label>
+                    <input type="text" name="user" id="user" value="" class="input" required maxlength="20">
+                </fieldset>
+                <fieldset class="fieldset">
+                    <label for="password" class="label">Senha</label>
+                    <input type="password" name="password" id="password" value="" class="input" maxlength="20">
+                </fieldset>
+                <fieldset class="fieldset">
+                    <input type="submit" value="entrar" class="btn btn-primary">
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    <script src="./public/js/common.js"></script>
+    <script src="./domain/login.js"></script>
+</body>
+
+</html>

@@ -19,7 +19,7 @@ function redirectToLogin() {
 
 (function checkAuth() {
 	const isAuthenticated = document.cookie.includes('user');
-	(isAuthenticated) ? redirectToDashboard() : redirectToLogin();
+	(isAuthenticated) && redirectToDashboard();
 })();
 
 function getNickAndPassword() {

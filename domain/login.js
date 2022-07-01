@@ -9,6 +9,19 @@ const database = {
 	}
 };
 
+function redirectToDashboard() {
+	if(location.pathname !== '/home.html') location.href = '/home.html';
+}
+
+function redirectToLogin() {
+	if(location.pathname !== '/#') location.href = '/#';
+}
+
+(function checkAuth() {
+	const isAuthenticated = document.cookie.includes('user');
+	(isAuthenticated) ? redirectToDashboard() : redirectToLogin();
+})();
+
 function getNickAndPassword() {
 	const passwordInput = form.querySelector("input[type=password]");
 	const nickInput = form.querySelector("input[type=text]");
@@ -75,14 +88,6 @@ function handleSuccess() {
 	redirectToDashboard()
 }
 
-function redirectToDashboard() {
-	location.href = '#dashboard';
-}
-
-function redirectToLogin() {
-	location.href = '#';
-}
-
 form && form.addEventListener('submit', function (event) {
 	event.preventDefault();
 	hideErrorMessage();
@@ -90,12 +95,8 @@ form && form.addEventListener('submit', function (event) {
 	showLoading(event);
 	setTimeout(() => {
 		const isSuccess = login(event.target);
-		(isSuccess) ? handleSuccess(): redirectToLogin();
+		(isSuccess) && handleSuccess();
 	}, 1000);
 	setTimeout(() => hidesLoading(event), 1000);
 });
 
-(function checkAuth() {
-	const isAuthenticated = document.cookie.includes('user');
-	(isAuthenticated) ? redirectToDashboard() : redirectToLogin();
-})();

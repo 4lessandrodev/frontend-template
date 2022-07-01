@@ -19,35 +19,50 @@
     <title>Dashboard</title>
 </head>
 
-<body>
+<body class="body">
 	<header class="header">
 		<div class="header__page">
 			<a href="#" class="header__page__logo">
-				<img src="" alt="logo" srcset="">
+				<img src="./public/icons/car.svg" alt="logo" srcset="">
 			</a>
 			<h1 class="header__page__title">Title</h1>
 		</div>
 		<nav class="header__page__nav">
-			<ul class="header__page__nav__ul">
-				<li class="header__page__nav__ul__item">radio a</li>
-				<li class="header__page__nav__ul__item">radio b</li>
+			<ul class="header__page__nav__ul ul__search">
+				<li class="header__page__nav__ul__item">
+					<input type="search" id="search" name="search" value="" class="input item__input" placeholder="pesquisar" maxlength="8" minlength="8">
+					<img class="icon" src="./public/icons/lupa.svg"></img>
+				</li>
 			</ul>
 			<ul class="header__page__nav__ul">
-				<li class="header__page__nav__ul__item">button</li>
+				<li class="header__page__nav__ul__item">
+					<input type="radio" id="linux" name="category" value="linux" class="item__input">
+					<label for="linux" class="item__label">linux</label><br>
+				</li>
+				<li class="header__page__nav__ul__item">
+					<input type="radio" id="windows" name="category" value="windows" class="item__input">
+					<label for="windows" class="item__label">windows</label>
+				</li>
+			</ul>
+			<ul class="header__page__nav__ul">
+				<li class="header__page__nav__ul__item">
+					<input type="button" value="Novo" class="item__input">
+				</li>
 			</ul>
 		</nav>
 	</header>
     <main class="main content">
 		<section>
 			<table>
-				tabble
+				no content on table
 			</table>
 		</section>
     </main>
 	<footer class="footer">
-		footer
+		<p>all right reserver 2022</p>
 	</footer>
     <script src="./public/js/common.js"></script>
+    <script src="./domain/check-auth.js"></script>
 </body>
 
 </html>

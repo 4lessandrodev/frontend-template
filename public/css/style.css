@@ -19,6 +19,13 @@
   --alert: blue;
   --warning: orange;
   --danger: rgb(199, 83, 83);
+  --header-height: 10vh;
+  --body-height: 85vh;
+  --footer-height: 5vh;
+}
+
+.body{
+  height: var(--body-height);
 }
 
 .label {
@@ -146,16 +153,30 @@
   justify-content: space-between;
   padding: 0.9rem 2rem; 
   box-shadow: 0px 8px 4px -5px var(--gray900);
+  height: var(--header-height);
 }
 
 .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   grid-area: footer;
   min-width: 100%;
+  position: fixed;
+  bottom: 0px;
+  height: 3rem;
+  background-color: var(--light);
+  height: var(--footer-height);
 }
 
 .content {
+  display: flex;
   grid-area: content;
+  justify-content: center;
+  align-items: center;
   min-width: 100%;
+  height: 100%;
+  background-color: var(--gray400);
 }
 
 .layout {
@@ -171,11 +192,17 @@
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background-color: #1b76d2;
+  background-color: var(--primary);
   overflow: hidden;
   justify-content: center;
   align-items: center;
   margin-right: 1rem;
+}
+
+.header__page__logo img {
+  display: flex;
+  width: 40px;
+  height: 40px;
 }
 
 .header__page {
@@ -197,6 +224,39 @@
   list-style: none;
   justify-content: center;
   align-items: center;
+  border-radius: 0.5rem;
+  border: 1px solid var(--gray600);
+  margin: 0 0.2rem;
+  padding: 0 1rem;
+}
+
+.ul__search .header__page__nav__ul__item input[type=search] {
+  margin: 0;
+  padding: 0;
+  width: 0px;
+  height: 0px;
+  transition: all ease-in-out 0.2s;
+}
+
+
+.ul__search:hover input[type=search],.ul__search input[type=search]:focus {
+  display: flex;
+  width: 250px;
+  height: 40px;
+  margin-right: 0.5rem;
+  padding: 0.5rem;
+}
+
+.header__page__nav__ul__item > .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.3rem;
+}
+
+.item__input, .item__label {
+  cursor: pointer;
+  padding: 0 0.5rem;
 }
 
 .header__page__title {
@@ -205,6 +265,24 @@
 }
 
 .header__page__nav__ul__item {
+  display: flex;
   padding: 0.5rem;
   cursor: pointer;
+  font-weight: 600;
+  width: 100%;
+}
+
+.item__input {
+  padding: 0.5rem;
+}
+
+.header__page__nav__ul__item>input[type=button].item__input{
+  width: auto;
+  height: 50px;
+  background-color: var(--success);
+  border: none;
+  border-radius: 0.5rem;
+  color: var(--light);
+  padding: 0 1rem;
+  font-weight: 600;
 }
